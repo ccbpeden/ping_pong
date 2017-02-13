@@ -24,5 +24,17 @@
             $this->assertEquals("1,2,ping", $result);
 
         }
+
+        function test_makeArrayWithPongs()
+        {
+            $test_PingPongGenerator = new PingPongGenerator;
+            $input = "5";
+
+            $result = $test_PingPongGenerator->makeOutputArray($input);
+
+            $this->assertEquals("1,2,ping,4,pong", $result);
+
+        }
+
     }
 ?>

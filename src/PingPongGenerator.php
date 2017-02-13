@@ -9,6 +9,8 @@
                 if($incrementor % 3 == 0)
                 {
                     array_push($outputArray , "ping");
+                } elseif($incrementor % 5 == 0) {
+                    array_push($outputArray , "pong");
                 } else {
                     array_push($outputArray , $incrementor);
                 }
