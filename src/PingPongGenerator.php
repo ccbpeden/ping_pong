@@ -6,9 +6,13 @@
             $outputArray = array();
             while($incrementor < $input_number){
                 $incrementor ++;
-                array_push($outputArray , $incrementor);
+                if($incrementor % 3 == 0)
+                {
+                    array_push($outputArray , "ping");
+                } else {
+                    array_push($outputArray , $incrementor);
+                }
             }
-
             return implode(",",$outputArray);
         }
     }
