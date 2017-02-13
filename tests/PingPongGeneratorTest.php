@@ -36,5 +36,17 @@
 
         }
 
+        function test_makeArrayWithPingPongs()
+        {
+            $test_PingPongGenerator = new PingPongGenerator;
+            $input = "15";
+
+            $result = $test_PingPongGenerator->makeOutputArray($input);
+
+            $this->assertEquals("1,2,ping,4,pong,ping,7,8,ping,pong,11,ping,13,14,pingpong", $result);
+
+        }
+
+
     }
 ?>

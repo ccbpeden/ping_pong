@@ -6,12 +6,18 @@
             $outputArray = array();
             while($incrementor < $input_number){
                 $incrementor ++;
-                if($incrementor % 3 == 0)
+                if($incrementor % 15 == 0)
+                {
+                    array_push($outputArray, "pingpong");
+                }
+                elseif($incrementor % 3 == 0)
                 {
                     array_push($outputArray , "ping");
-                } elseif($incrementor % 5 == 0) {
+                }
+                elseif($incrementor % 5 == 0) {
                     array_push($outputArray , "pong");
-                } else {
+                }
+                else {
                     array_push($outputArray , $incrementor);
                 }
             }
