@@ -18,8 +18,8 @@
     $app['debug'] = true;
 
     $app->get("/", function() use ($app) {
-        DeleteAll();
-        return $app['twig']->render('form.html.twig', array('results' => $_SESSION['results']));
+        $_SESSION['results'] = array();
+        return $app['twig']->render('form.html.twig', 'results' => $_SESSION['results']);
     });
 
     $app->post("/view_ping_pong", function() use($app) {

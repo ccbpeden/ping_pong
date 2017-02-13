@@ -3,6 +3,7 @@
 
         static function makeOutputArray($input_number)
         {
+            $_SESSION['results'] = array();
             $incrementor = 0;
             $outputArray = array();
             while($incrementor < $input_number){
@@ -24,15 +25,5 @@
             }
             return $outputArray;
         }
-
-        function GetAll()
-        {
-            return $_SESSION['results'];
-        }
-
-    }
-    function DeleteAll()
-    {
-        $_SESSION['results'] = array();
     }
 ?>
