@@ -1,6 +1,7 @@
 <?php
     class PingPongGenerator{
-        function makeOutputArray($input_number)
+
+        static function makeOutputArray($input_number)
         {
             $incrementor = 0;
             $outputArray = array();
@@ -21,7 +22,17 @@
                     array_push($outputArray , $incrementor);
                 }
             }
-            return implode(",",$outputArray);
+            return $outputArray;
         }
+
+        function GetAll()
+        {
+            return $_SESSION['results'];
+        }
+
+    }
+    function DeleteAll()
+    {
+        $_SESSION['results'] = array();
     }
 ?>
